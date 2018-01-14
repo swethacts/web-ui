@@ -2,7 +2,7 @@
 set -x
 
 export DISPLAY=:99
-chown cognizant:cognizant /etc/init.d/
+#chown cognizant:cognizant /etc/init.d/
 bash /etc/init.d/xvfb start
 ls -las
 
@@ -10,8 +10,8 @@ echo "Functional test cases..."
 
 cd html-source
 
-npm install grunt --save-dev
-npm install jasmine-reporters --save-dev
+sudo npm install grunt --save-dev
+sudo npm install jasmine-reporters --save-dev
 #npm install
 
 echo "Webdriver starting..."

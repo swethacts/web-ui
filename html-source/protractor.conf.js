@@ -28,8 +28,8 @@ exports.config = {
 	
 	chromeOptions: {
 		//args: ['no-sandbox', '--start-fullscreen']
-		//args: ['no-sandbox']
-		args: [ "--headless"]
+		args: ['no-sandbox','headless']
+		
 
 	}
 	

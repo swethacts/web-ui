@@ -41,6 +41,9 @@ ls -ltr
 cd ../../../../../../../../../../
 ls -ltr
 
+cd tests
+ls -ltr
+
 #if [ "$TEST_FAILURE" -eq 1 ]; then
 #	echo "Exiting with exit code 1..."
 #	exit 1

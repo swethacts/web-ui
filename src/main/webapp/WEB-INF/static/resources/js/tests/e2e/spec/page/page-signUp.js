@@ -1,7 +1,7 @@
 (function () {
 	var QHHomepage = function () {
 		
-		var myAccountLink = element(by.linkText('My Account'));
+		var myAccountLink = element(by.id('headerMyAccount'));
 		var signInButton = element(by.id('authSignIn'));
         var emailInput = element(by.id('email_id'));
         var passwordInput = element(by.id('password'));

@@ -1,6 +1,6 @@
 var Application = require('./page/page-signUp.js');
 
-describe('sqhub login page', function() {
+describe('eCommerce login', function() {
 	var application = new Application();
    beforeEach(function() {
 	   

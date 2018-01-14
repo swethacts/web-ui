@@ -2,12 +2,13 @@
 set -x
 
 export DISPLAY=:99
+chown cognizant:cognizant /etc/init.d/
 bash /etc/init.d/xvfb start
 ls -las
 
 echo "Functional test cases..."
 
-cd web-ui/html-source
+cd html-source
 
 npm install grunt --save-dev
 npm install jasmine-reporters --save-dev

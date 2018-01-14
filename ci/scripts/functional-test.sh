@@ -28,9 +28,9 @@ fi
 echo "Executing unit test cases..."
 #grunt runee --force
 
-cd ../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults
-ls -ltr
-cp *.xml ../../../../../../../../../../../tests
+#cd ../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults
+#ls -ltr
+#cp *.xml ../../../../../../../../../../../tests
 ls -ltr
 
 if [ "$TEST_FAILURE" -eq 1 ]; then

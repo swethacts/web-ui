@@ -10,8 +10,8 @@ echo "Functional test cases..."
 
 cd html-source
 
-sudo npm install grunt --save-dev
-sudo npm install jasmine-reporters --save-dev
+npm install grunt --save-dev
+npm install jasmine-reporters --save-dev
 #npm install
 
 echo "Webdriver starting..."

@@ -6,8 +6,7 @@ pipeline {
       steps {
         sh 'echo "hello-world"'
 		sh 'chmod 777 ./ci/scripts/functional-test.sh'
-        sh './ci/scripts/functional-test.sh'
-		junit './tests/*.xml'
+        sh './ci/scripts/functional-test.sh'		
 		sh 'echo "bye-world"'
 	  }
     }

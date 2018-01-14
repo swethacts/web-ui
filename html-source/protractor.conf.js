@@ -19,8 +19,8 @@ exports.config = {
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
-    version: '63',
-	platform: 'Windows 7',
+    //version: '63',
+	//platform: 'Windows 7',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,
@@ -28,7 +28,9 @@ exports.config = {
 	
 	chromeOptions: {
 		//args: ['no-sandbox', '--start-fullscreen']
-		args: ['no-sandbox']
+		//args: ['no-sandbox']
+		args: [ "--headless", "--disable-gpu"]
+
 	}
 	
 	//proxy: {

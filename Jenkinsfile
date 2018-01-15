@@ -4,8 +4,8 @@ pipeline {
     stage('Version') {
 	  agent { docker 'weremsoft/gulp-xvfb-headless-chrome-protractor' } 
       steps {
-		slackSend "Creating Docker Container for Protractor..."
-		slackSend color: "ff0000", message: "Starting `Functional` Test Execution - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+		slackSend color: "67bc73", message: "`Creating Protractor Docker container...`"
+		slackSend color: "67bc73", message: "`Starting Functional Test Execution. Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER}` (<${env.BUILD_URL}|Open>)"
 				
         sh '''
 			echo "hello-world"
@@ -14,8 +14,8 @@ pipeline {
 		'''
 		junit 'tests/*.xml'		
 		sh 'echo "bye-world"'
-		slackSend "Docker Container Destroyed"
-		slackSend "Functional Test Execution Completed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+		slackSend color: "67bc73", message: "`Destroying Docker container`"
+		slackSend color: "67bc73", message: "`Functional Test Execution Complete. Job URL:` (<${env.BUILD_URL}|Open>)"
 	  }
     }
   }

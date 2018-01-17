@@ -29,9 +29,9 @@ exports.config = {
     //maxInstances: 2
 	
 	chromeOptions: {
-		args: ['no-sandbox', '--start-fullscreen']
+		//args: ['no-sandbox', '--start-fullscreen']
 		//args: ['no-sandbox','headless']
-		//args: ['no-sandbox']
+		args: ['no-sandbox']
 	}
 	
 	//proxy: {
@@ -52,11 +52,17 @@ exports.config = {
   
   onPrepare: function() {
 	    var jasmineReporters = require('jasmine-reporters');
-	    
+	    var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+		
 	    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 	        consolidateAll: true,
 	        savePath: '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults',
 	        filePrefix: 'xmloutput'
 	    }));
+		
+		 jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
+	    	   savePath: '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults'
+	    }));
+		
   }
 };

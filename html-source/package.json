@@ -42,7 +42,8 @@
 	"karma-junit-reporter": "*",
     "karma-phantomjs-launcher": "*",
     "karma-script-launcher": "*",
-	"protractor": "*"
+	"protractor": "*",
+	"protractor-jasmine2-html-reporter": "*"
   },
   "repository": {
     "type": "git",

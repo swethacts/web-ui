@@ -29,9 +29,9 @@ exports.config = {
     //maxInstances: 2
 	
 	chromeOptions: {
-		//args: ['no-sandbox', '--start-fullscreen']
+		args: ['no-sandbox', '--start-fullscreen']
 		//args: ['no-sandbox','headless']
-		args: ['no-sandbox']
+		//args: ['no-sandbox']
 	}
 	
 	//proxy: {

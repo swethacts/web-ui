@@ -46,6 +46,7 @@
         this.doForgotPassword = function () {        	
 			browser.driver.sleep(1000);			
 			email.sendKeys('connectns99@gmail.com');
+			browser.driver.sleep(3000);	
 			submit.click();
 			browser.driver.sleep(1000);
 		};

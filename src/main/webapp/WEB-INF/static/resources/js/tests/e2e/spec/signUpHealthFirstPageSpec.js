@@ -1,6 +1,6 @@
 var Application = require('./page/page-signUpMobileHealthFirst.js');
 
-describe('HealthFirst Automation Regression', function() {
+describe('HealthFirst app', function() {
 	var application = new Application();
    beforeEach(function() {
 	   

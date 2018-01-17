@@ -12,12 +12,12 @@ pipeline {
 					slackSend color: "cceef9", message: "`Starting Test Execution on https://www.healthfirst.com. Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER}` (<${env.BUILD_URL}|Open>)"
 							
 					sh '''
-						echo "Starting Regression Test Execution on https://healthfirst.com/...."
+						echo "Starting Regression Test Execution on https://healthfirst.com"
 						chmod 777 ./ci/scripts/functional-test.sh
 						./ci/scripts/functional-test.sh
 					'''					
 
-					
+					sh 'echo "Archieving junit xml test results..."'
 					junit 'tests/*.xml'		
 					
 						
@@ -40,19 +40,19 @@ pipeline {
 					sh 'sleep 25'
 					slackSend color: "67bc73", message: "TestCase 4: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Error Out for Invalid Sign In"
+					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Error Out for Invalid Sign In*"
 					sh 'sleep 13'
 					slackSend color: "67bc73", message: "TestCase 5: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Valid Sign In"
+					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Valid Sign In*"
 					sh 'sleep 18'
 					slackSend color: "67bc73", message: "TestCase 6: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 7: *Sign Out"
+					slackSend color: "fcf9bd", message: "Executing TestCase 7: *Sign Out*"
 					sh 'sleep 11'
 					slackSend color: "67bc73", message: "TestCase 7: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Lands on Contact Us Page"
+					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Lands on Contact Us Page*"
 					sh 'sleep 21'
 					slackSend color: "67bc73", message: "TestCase 8: *PASSED*"
 					
@@ -65,7 +65,7 @@ pipeline {
 					slackSend color: "cceef9", message: "`Functional Test Execution Complete. Job URL:` (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Destroying Docker container...`"
 
-					sh 'echo "Archieving junit xml test results..."'
+					
 					sh 'echo "Regression Test Execution Complete"'					
 			  
 				}

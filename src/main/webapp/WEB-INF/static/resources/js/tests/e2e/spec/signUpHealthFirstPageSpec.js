@@ -1,4 +1,4 @@
-var Application = require('./page/page-signUpHealthFirst.js');
+var Application = require('./page/page-signUpMobileHealthFirst.js');
 
 describe('HealthFirst Login', function() {
 	var application = new Application();
@@ -22,5 +22,9 @@ describe('HealthFirst Login', function() {
 	     expect(browser.getTitle()).toContain('HealthFirst');
    });
    
+   it('should sign in successfully log off user on signoff', function() {
+        application.signOutUser();
+        expect(browser.getTitle()).toContain('HealthFirst');
+   });
      
 });

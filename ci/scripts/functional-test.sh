@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+#set -x
 
 export DISPLAY=:99
 #chown cognizant:cognizant /etc/init.d/

@@ -20,7 +20,7 @@ exports.config = {
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
-    version: '63',
+    version: 'latest',
 	platform: 'Windows 7',
 	screenResolution:'1024x768',
 	//'time-zone': 'Detroit',

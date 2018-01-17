@@ -11,10 +11,15 @@
 			var myaccount = element(by.linkText('MY ACCOUNT'));
 			
         browser.ignoreSynchronization = true;
-        browser.get('https://www.healthfirst.com/');
+        //browser.get('https://www.healthfirst.com/');
         //browser.driver.manage().window().maximize();
 
-        this.gotToOnTraq = function() {
+        this.gotToHome = function() {
+        	browser.waitForAngular();
+        	browser.driver.sleep(10000);
+        };
+
+        this.gotToOnTraq = function() {        	
         	browser.driver.sleep(5000);
         	hamburger.click();
         	ontraq.click();

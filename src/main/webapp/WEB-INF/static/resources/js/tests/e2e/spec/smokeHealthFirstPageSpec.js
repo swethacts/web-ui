@@ -6,7 +6,8 @@ describe('HealthFirst app', function() {
 	   
    });
    
-   it('should display HOME Page', function() {       
+   it('should display HOME Page', function() {
+         application.gotToHome();
          expect(browser.getTitle()).toContain('HealthFirst');
    });
 

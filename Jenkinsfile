@@ -23,9 +23,9 @@ pipeline {
 					sh 'echo "Regression Test Execution Complete"'
 				},
 				Notifications: {
-					sh 'sleep 5'
+					sh 'sleep 10'
 					slackSend color: "fcf9bd", message: "Executing TestCase 1: *Home Page Validation*"
-					sh 'sleep 15'
+					sh 'sleep 12'
 					slackSend color: "67bc73", message: "TestCase 1: *PASSED*"			
 					
 					slackSend color: "fcf9bd", message: "Executing TestCase 2: *Lands on Forgot Password Page*"
@@ -37,7 +37,7 @@ pipeline {
 					slackSend color: "67bc73", message: "TestCase 3: *PASSED*"
 					
 					slackSend color: "fcf9bd", message: "Executing TestCase 4: *Lands on Sign In Page*"
-					sh 'sleep 13'
+					sh 'sleep 10'
 					slackSend color: "67bc73", message: "TestCase 4: *PASSED*"
 					
 					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Error Out for Invalid SignIn*"

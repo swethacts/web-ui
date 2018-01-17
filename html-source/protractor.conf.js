@@ -21,7 +21,7 @@ exports.config = {
     browserName: 'chrome',
     version: '63',
 	platform: 'Windows 7',
-	screenResolution:'1024x768'
+	screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

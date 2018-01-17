@@ -29,7 +29,7 @@ exports.config = {
 	chromeOptions: {
 		//args: ['no-sandbox', '--start-fullscreen']
 		//args: ['no-sandbox','headless']
-		args: ['no-sandbox']
+		args: ['no-sandbox', '--window-size=1280x1024']
 	}
 	
 	//proxy: {

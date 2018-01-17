@@ -11,7 +11,7 @@
 			var myaccount = element(by.linkText('MY ACCOUNT'));
 			
         browser.ignoreSynchronization = true;
-        //browser.get('https://www.healthfirst.com/');
+        browser.get('https://www.healthfirst.com/');
         //browser.driver.manage().window().maximize();
 
         this.gotToHome = function() {

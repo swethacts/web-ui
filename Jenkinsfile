@@ -7,7 +7,7 @@ pipeline {
 			parallel(
 				Integration: {
 
-					slackSend color: "2196F3", message: "Starting *Integration Testing* Job"
+					slackSend color: "229954", message: "Starting *Integration Testing* Job"
 					
 					sh 'echo "Creating Protractor Docker container"'
 					slackSend color: "cceef9", message: "`Starting Integration Test Execution on https://healthfirst.org` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"

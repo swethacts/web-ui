@@ -24,27 +24,27 @@ pipeline {
 				},
 				Notifications: {
 					sh 'sleep 10'
-					slackSend color: "fcf9bd", message: "Executing TestCase 1: *Home Page Validation*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 1: *User lands on main page*"
 					sh 'sleep 12'
 					slackSend color: "67bc73", message: "TestCase 1: *PASSED*"			
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 2: *Lands on Forgot Password Page*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 2: *User lands on Forgot Password*"
 					sh 'sleep 10'
 					slackSend color: "67bc73", message: "TestCase 2: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 3: *Forgot Password*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 3: *User does the Forgot Password flow*"
 					sh 'sleep 7'
 					slackSend color: "67bc73", message: "TestCase 3: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 4: *Lands on Sign In Page*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 4: *User lands on Login Page*"
 					sh 'sleep 10'
 					slackSend color: "67bc73", message: "TestCase 4: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Error Out for Invalid SignIn*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Invalid Sign In Password*"
 					sh 'sleep 10'
 					slackSend color: "67bc73", message: "TestCase 5: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Valid SignIn*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 6: *User Signs In with valid credentials*"
 					sh 'sleep 12'
 					slackSend color: "67bc73", message: "TestCase 6: *PASSED*"
 					

@@ -5,7 +5,9 @@ pipeline {
 	  agent { docker 'weremsoft/gulp-xvfb-headless-chrome-protractor' } 
       steps {
 			parallel(
-				Smoke: {				
+				Smoke: {
+					slackSend color: "67bc73", message: "Starting *Smoke Testing* Job"
+				
 					sh 'echo "Creating Protractor Docker container..."'
 					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://healthfirst.org/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"

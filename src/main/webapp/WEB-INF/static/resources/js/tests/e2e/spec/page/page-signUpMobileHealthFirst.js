@@ -35,6 +35,11 @@
         browser.get('https://www.healthfirst.com/');
         //browser.driver.manage().window().maximize();
 
+         this.gotToHome = function() {
+        	browser.waitForAngular();
+        	browser.driver.sleep(10000);
+        };
+
         this.goToForgotPassword = function () {
         	browser.driver.sleep(5000);
         	hamburger.click();
@@ -86,32 +91,7 @@
 			browser.driver.sleep(3000);	
 		};
 
-		this.signOutUser = function () {
-			browser.driver.sleep(2000);
-			hamburger.click();
-			loginLink.click();
-			browser.driver.sleep(3000);	
-			signOut.click();				
-		};
-
-		this.gotocontactus = function () {
-			browser.driver.sleep(4000);
-			//goToHome.click();
-			//hamburger.click();
-			contactus.click();
-			browser.driver.sleep(3000);
-		};
-
-		this.contactus = function () {			
-			firstname.sendKeys('John');
-			lastname.sendKeys('Smith');
-			company.sendKeys('CKS Corporation');
-			emailid.sendKeys('johnsmith9988112@gmail.com');
-			phone.sendKeys('8601110000');
-			comments.sendKeys('Need more info');
-			submitContactUs.click();
-		};
-        
+		        
     };
     module.exports = function () {
         return new QHHomepage();

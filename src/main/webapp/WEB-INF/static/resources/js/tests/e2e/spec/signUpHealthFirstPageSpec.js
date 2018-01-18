@@ -6,7 +6,8 @@ describe('HealthFirst app', function() {
 	   
    });
    
-   it('should display HealthFirst home page', function() {       
+   it('should display HealthFirst home page', function() { 
+         application.gotToHome();    
          expect(browser.getTitle()).toContain('HealthFirst');
    });
 
@@ -41,20 +42,5 @@ describe('HealthFirst app', function() {
          expect(browser.getTitle()).toContain('HealthFirst');
    });
    
-   it('should sign in successfully log off user on signoff', function() {
-         application.signOutUser();
-         expect(browser.getTitle()).toContain('HealthFirst');
-   });
-
-    it('should go to Contact Us page', function() {
-         application.gotocontactus();
-         expect(browser.getTitle()).toContain('Contact Us');       
-   });
-
-   it('should provide a confirmation on contact us form submission', function() {
-         application.contactus();
-         //expect(browser.getCurrentUrl()).toEqual('https://www.healthfirst.com/thank-you/'); 
-         expect(browser.getCurrentUrl()).toEqual('https://www.healthfirst.com/thank-you-user');        
-   });
-     
+        
 });

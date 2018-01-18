@@ -6,7 +6,7 @@ pipeline {
       steps {
 			parallel(
 				Regression: {
-					slackSend color: "67bc73", message: "Starting *Regression Testing* Job"
+					slackSend color: "2196F3", message: "Starting *Regression Testing* Job"
 				
 					sh 'echo "Creating Protractor Docker container"'
 					slackSend color: "cceef9", message: "`Starting Regression Test Execution on https://healthfirst.org` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
@@ -26,35 +26,35 @@ pipeline {
 				},
 				Notifications: {
 					sh 'sleep 10'
-					slackSend color: "fcf9bd", message: "Executing TestCase 1: *Home Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 1: *Home Page Validation*"
 					sh 'sleep 1'
-					slackSend color: "67bc73", message: "TestCase 1: *PASSED*"			
+					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"			
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 2: *Lands on Member Login Page*"
+					slackSend color: "78909C", message: "Executing TestCase 2: *Lands on Member Login Page*"
 					sh 'sleep 5'
-					slackSend color: "67bc73", message: "TestCase 2: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 3: *Member Login Error with invalid credentials*"
+					slackSend color: "78909C", message: "Executing TestCase 3: *Member Login Error with invalid credentials*"
 					sh 'sleep 4'
-					slackSend color: "67bc73", message: "TestCase 3: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 4: *Lands on Provider Login Page*"
+					slackSend color: "78909C", message: "Executing TestCase 4: *Lands on Provider Login Page*"
 					sh 'sleep 6'
-					slackSend color: "67bc73", message: "TestCase 4: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Provider Login Error with invalid credentials*"
+					slackSend color: "78909C", message: "Executing TestCase 5: *Provider Login Error with invalid credentials*"
 					sh 'sleep 3'
-					slackSend color: "67bc73", message: "TestCase 5: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 5: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Keyword Search*"
+					slackSend color: "78909C", message: "Executing TestCase 6: *Keyword Search*"
 					sh 'sleep 6'
-					slackSend color: "67bc73", message: "TestCase 6: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 6: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 7: *Lands on Pay my Bill Page*"
+					slackSend color: "78909C", message: "Executing TestCase 7: *Lands on Pay my Bill Page*"
 					sh 'sleep 3'
-					slackSend color: "67bc73", message: "TestCase 7: *PASSED*"
+					slackSend color: "2196F3", message: "TestCase 7: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Pay my Bill Login Error with invalid credentials*"
+					slackSend color: "78909C", message: "Executing TestCase 8: *Pay my Bill Login Error with invalid credentials*"
 					sh 'sleep 3'
 					slackSend color: "ff0000", message: "TestCase 8: *FAILED*"
 					

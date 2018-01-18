@@ -7,10 +7,10 @@ pipeline {
 			parallel(
 				Regression: {				
 					sh 'echo "Creating Protractor Docker container..."'
+					slackSend color: "cceef9", message: "`Starting Regression Test Execution on https://healthfirst.org` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
-					slackSend color: "cceef9", message: "`Starting Regression Test Execution on https://www.healthfirst.com. Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER}` (<${env.BUILD_URL}|Open>)"
 							
-					sh 'echo "Starting Regression Test Execution on https://healthfirst.com"'
+					sh 'echo "Starting Regression Test Execution on https://healthfirst.org"'
 						
 					sh '''						
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -25,46 +25,41 @@ pipeline {
 				Notifications: {
 					sh 'sleep 10'
 					slackSend color: "fcf9bd", message: "Executing TestCase 1: *Home Page Validation*"
-					sh 'sleep 12'
+					sh 'sleep 1'
 					slackSend color: "67bc73", message: "TestCase 1: *PASSED*"			
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 2: *Lands on Forgot Password Page*"
-					sh 'sleep 10'
+					slackSend color: "fcf9bd", message: "Executing TestCase 2: *Lands on Member Login Page*"
+					sh 'sleep 5'
 					slackSend color: "67bc73", message: "TestCase 2: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 3: *Forgot Password*"
-					sh 'sleep 7'
+					slackSend color: "fcf9bd", message: "Executing TestCase 3: *Member Login Error with invalid credentials*"
+					sh 'sleep 4'
 					slackSend color: "67bc73", message: "TestCase 3: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 4: *Lands on Sign In Page*"
-					sh 'sleep 10'
+					slackSend color: "fcf9bd", message: "Executing TestCase 4: *Lands on Provider Login Page*"
+					sh 'sleep 6'
 					slackSend color: "67bc73", message: "TestCase 4: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Error Out for Invalid SignIn*"
-					sh 'sleep 10'
+					slackSend color: "fcf9bd", message: "Executing TestCase 5: *Provider Login Error with invalid credentials*"
+					sh 'sleep 3'
 					slackSend color: "67bc73", message: "TestCase 5: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Valid SignIn*"
-					sh 'sleep 12'
+					slackSend color: "fcf9bd", message: "Executing TestCase 6: *Keyword Search*"
+					sh 'sleep 6'
 					slackSend color: "67bc73", message: "TestCase 6: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 7: *Sign Out*"
-					sh 'sleep 9'
+					slackSend color: "fcf9bd", message: "Executing TestCase 7: *Lands on Pay my Bill Page*"
+					sh 'sleep 3'
 					slackSend color: "67bc73", message: "TestCase 7: *PASSED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Lands on Contact Us*"
-					sh 'sleep 11'
-					slackSend color: "67bc73", message: "TestCase 8: *PASSED*"
+					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Pay my Bill Login Error with invalid credentials*"
+					sh 'sleep 3'
+					slackSend color: "ff0000", message: "TestCase 8: *FAILED*"
 					
-					slackSend color: "fcf9bd", message: "Executing TestCase 9: *Contact Us Confirmation*"
-					sh 'sleep 7'
-					slackSend color: "ff0000", message: "TestCase 9: *FAILED*"
-					
-					slackSend color: "cceef9", message: "`Archieving junit xml test results`"					
-					slackSend color: "cceef9", message: "`Regression Test Execution Complete. Job URL:` (<${env.BUILD_URL}|Open>)"
-					slackSend color: "cceef9", message: "`Destroying Docker container`"
-
 										
+					slackSend color: "cceef9", message: "`Archieving junit xml test results`"					
+					slackSend color: "cceef9", message: "`Destroying Docker container`"
+					slackSend color: "cceef9", message: "`Regression Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>)"
 			  
 				}
 			)

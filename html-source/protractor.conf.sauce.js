@@ -19,9 +19,9 @@ exports.config = {
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
-    version: '63',
-	platform: 'Windows 7',
-	screenResolution:'1024x768',
+    version: 'latest',
+	platform: 'macOS 10.13',
+	//screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

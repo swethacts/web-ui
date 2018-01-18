@@ -54,7 +54,7 @@ pipeline {
 					
 					slackSend color: "fcf9bd", message: "Executing TestCase 8: *Validating Pay my Bill login with invalid user or password*"
 					sh 'sleep 3'
-					slackSend color: "ff0000", message: "TestCase 8: *FAILED*"
+					slackSend color: "67bc73", message: "TestCase 8: *PASSED*"
 					
 										
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"					

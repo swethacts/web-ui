@@ -34,6 +34,11 @@
         browser.ignoreSynchronization = true;
         browser.get('https://www.healthfirst.com/');
         //browser.driver.manage().window().maximize();
+		
+		this.gotToHome = function() {
+        	browser.waitForAngular();
+        	browser.driver.sleep(10000);
+        };
 
         this.goToForgotPassword = function () {
         	browser.driver.sleep(5000);

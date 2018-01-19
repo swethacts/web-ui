@@ -27,7 +27,7 @@ pipeline {
 				},
 				Notifications: {
 					sh 'sleep 10'
-					slackSend color: "78909C", message: "Executing TestCase 1: *Validing About Us Page*"
+					slackSend color: "78909C", message: "Executing TestCase 1: *Validating About Us Page*"
 					sh 'sleep 1'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"			
 					

@@ -24,8 +24,9 @@ exports.config = {
   capabilities: {
     browserName: 'chrome',
     version: 'latest',
-	platform: 'Windows 7',
-	screenResolution:'1024x768',
+	platform: 'macOS 10.13',
+	name: 'Health First Smoke Tests',
+	//screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

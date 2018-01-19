@@ -22,6 +22,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
+	name: 'Health First Integration Tests',
 	//screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,

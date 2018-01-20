@@ -2,12 +2,12 @@ exports.config = {
   
     //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
     //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip		
-    //seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://localhost:4444/wd/hub',
   
     //Location of E2E test specs
     specs: [
     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regressionHFOrgSpec.js'
-     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'      
     ],
 	
@@ -15,15 +15,14 @@ exports.config = {
 	//directConnect: true,
 	
 	//Sauce Labs - While using sauce, comment the seleniumAddress
-  	sauceUser: 'connectns99',
-    sauceKey: 'a95eb41e-5c8e-4b9a-b64f-fae65d621834',
+  	//sauceUser: 'connectns99',
+    //sauceKey: 'a95eb41e-5c8e-4b9a-b64f-fae65d621834',
 
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
-    version: 'latest',
-	platform: 'macOS 10.13',
-	name: 'Health First Regression Tests',
+    //version: '63',
+	//platform: 'Windows 7',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,
@@ -31,8 +30,9 @@ exports.config = {
 	
 	chromeOptions: {
 		//args: ['no-sandbox', '--start-fullscreen']
-		//args: ['no-sandbox','headless']
-		args: ['no-sandbox']
+		args: ['no-sandbox','headless']
+		
+
 	}
 	
 	//proxy: {

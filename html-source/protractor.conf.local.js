@@ -18,6 +18,9 @@ exports.config = {
 	//Sauce Labs - While using sauce, comment the seleniumAddress
   	//sauceUser: 'connectns99',
     //sauceKey: 'a95eb41e-5c8e-4b9a-b64f-fae65d621834',
+	
+	//sauceUser: 'qahubclara',
+    //sauceKey: 'cad0fb54-cf1b-475b-952f-1cd7fec8378d',
 
     // Capabilities to be passed to the webdriver instance.
   capabilities: {

@@ -17,11 +17,8 @@ exports.config = {
 	//directConnect: true,
 	
 	//Sauce Labs - While using sauce, comment the seleniumAddress
-  	//sauceUser: 'connectns99',
-    //sauceKey: 'a95eb41e-5c8e-4b9a-b64f-fae65d621834',
-	
-	sauceUser: 'qahubclara',
-    sauceKey: 'cad0fb54-cf1b-475b-952f-1cd7fec8378d',
+  	sauceUser: 'Cognizant_Integration',
+    sauceKey: 'a90e4692-648f-49b8-9691-b372a9973c12',
 
     // Capabilities to be passed to the webdriver instance.
   capabilities: {

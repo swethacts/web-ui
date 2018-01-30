@@ -6,7 +6,8 @@
   
     //Location of E2E test specs
     specs: [
-     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-RBC.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'	 
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'      
     ],

@@ -9,10 +9,10 @@ pipeline {
 					slackSend color: "229954", message: "Starting *Smoke Testing* Job													"
 				
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://healthfirst.org/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://www.rbcroyalbank.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 							
-					sh 'echo "Starting Smoke Test Execution on https://healthfirst.org"'
+					sh 'echo "Starting Smoke Test Execution on https://www.rbcroyalbank.com"'
 						
 					sh '''						
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -30,27 +30,27 @@ pipeline {
 					sh 'sleep 1'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"			
 					
-					slackSend color: "78909C", message: "Executing TestCase 2: *Privacy Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 2: *Bank Accounts Page Validation*"
 					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 					
-					slackSend color: "78909C", message: "Executing TestCase 3: *Sitemap Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 3: *Credit Cards Page Validation*"
 					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 					
-					slackSend color: "78909C", message: "Executing TestCase 4: *Glossary Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 4: *Mortgages Page Validation*"
 					sh 'sleep 6'
 					slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
 					
-					slackSend color: "78909C", message: "Executing TestCase 5: *Contact Us Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 5: *Loans Page Validation*"
 					sh 'sleep 6'
 					slackSend color: "2196F3", message: "TestCase 5: *PASSED*"
 					
-					slackSend color: "78909C", message: "Executing TestCase 6: *About Us Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 6: *Ways to Bank Page Validation*"
 					sh 'sleep 6'
 					slackSend color: "2196F3", message: "TestCase 6: *PASSED*"
 
-					slackSend color: "78909C", message: "Executing TestCase 7: *Careers Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 7: *About RBC Page Validation*"
 					sh 'sleep 6'
 					slackSend color: "ff0000", message: "TestCase 7: *FAILED*"					
 									

@@ -1,18 +1,18 @@
 pipeline {
   agent none
   stages {
-    stage('Integration Testing') {
+    stage('Regression Testing') {
 	  agent { docker 'weremsoft/gulp-xvfb-headless-chrome-protractor' } 
       steps {
 			parallel(
-				Integration: {
-					slackSend color: "229954", message: "Starting *Integration Testing* Job													"
+				Regression: {
+					slackSend color: "229954", message: "Starting *Regression Testing* Job													"
 				
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Integration Tests on https://www.rbcroyalbank.com` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Regression Tests on https://www.rbcroyalbank.com` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 							
-					sh 'echo "Starting Integration Test Execution on https://www.rbcroyalbank.com"'
+					sh 'echo "Starting Regression Test Execution on https://www.rbcroyalbank.com"'
 						
 					sh '''						
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -22,7 +22,7 @@ pipeline {
 					sh 'echo "Archieving junit xml test results"'
 					junit 'tests/*.xml'
 
-					sh 'echo "Integration Test Execution Complete"'
+					sh 'echo "Regression Test Execution Complete"'
 				},
 				Notifications: {
 					sh 'sleep 10'
@@ -56,7 +56,7 @@ pipeline {
 									
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"					
 					slackSend color: "cceef9", message: "`Destroying Docker container`"
-					slackSend color: "cceef9", message: "`Integration Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<${env.SauceLabsVideo}|SauceLabs Video>)"
+					slackSend color: "cceef9", message: "`Regression Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<${env.SauceLabsVideo}|SauceLabs Video>)"
 					
 				}															
 			)

@@ -1,4 +1,4 @@
-var Application = require('./page/page-integration-RBC.js');
+var Application = require('./page/page-regression-RBC.js');
 
 describe('RBC Royal Bank application', function() {
 	var application = new Application();

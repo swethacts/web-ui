@@ -26,7 +26,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
-	name: 'RBC First Smoke Tests',
+	name: 'RBC Royanl Bank Smoke Tests',
 	//screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,

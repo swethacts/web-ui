@@ -25,7 +25,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
-	name: 'RBC Smoke Tests',
+	name: 'RBC Royank Bank Smoke Tests',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

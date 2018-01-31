@@ -43,15 +43,15 @@ pipeline {
 					slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
 					
 					slackSend color: "78909C", message: "Executing TestCase 5: *Contact Us Page Validation*"
-					sh 'sleep 6'
+					sh 'sleep 10'
 					slackSend color: "2196F3", message: "TestCase 5: *PASSED*"
 					
 					slackSend color: "78909C", message: "Executing TestCase 6: *About Us Page Validation*"
-					sh 'sleep 6'
+					sh 'sleep 10'
 					slackSend color: "2196F3", message: "TestCase 6: *PASSED*"
 
 					slackSend color: "78909C", message: "Executing TestCase 7: *Careers Page Validation*"
-					sh 'sleep 6'
+					sh 'sleep 10'
 					slackSend color: "ff0000", message: "TestCase 7: *FAILED*"					
 									
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"					

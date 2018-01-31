@@ -1,6 +1,6 @@
 var Application = require('./page/page-smoke-RBC.js');
 
-describe('HealthFirst Org app', function() {
+describe('RBC Royal Bank application', function() {
 	var application = new Application();
    beforeEach(function() {
 	   

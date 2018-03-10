@@ -30,7 +30,7 @@ jobs:
     passed: [Version]
   - get: web-ui  
   - task: unit-test
-    file: web-ui/ci/java-unit-test.yml
+    file: web-ui/ci/java-unit-test-maven.yml
     input_mapping: {code-repo: backend}
     
 - name: Smoke Test

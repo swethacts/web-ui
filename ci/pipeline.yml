@@ -27,7 +27,7 @@ jobs:
   plan:
   - get: backend
     trigger: true    
-    passed: [Version]
+    #passed: [Version]
   - get: web-ui  
   - task: unit-test
     file: web-ui/ci/java-unit-test-maven.yml
@@ -38,7 +38,7 @@ jobs:
   plan:
   - get: web-ui
     trigger: true
-    passed: [Unit Test]
+    #passed: [Unit Test]
   - task: smoke-test
     file: web-ui/ci/functional-test.yml
     input_mapping: {code-repo: web-ui}   

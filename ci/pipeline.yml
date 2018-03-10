@@ -36,9 +36,9 @@ jobs:
       put: slack
       params:        
         channel: "#test-feeds"
-        username: concourse
-        icon_url: https://avatars1.githubusercontent.com/u/7809479?v=3&s=200
-        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME failed versioning! <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Unit Test
   max_in_flight: 1
@@ -50,6 +50,13 @@ jobs:
   - task: unit-test
     file: web-ui/ci/java-unit-test-maven.yml
     input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
 
 - name: Code Quality
   max_in_flight: 1
@@ -61,6 +68,13 @@ jobs:
   - task: sonar-scan
     file: web-ui/ci/code-quality.yml
     input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Security Scan
   max_in_flight: 1
@@ -72,6 +86,13 @@ jobs:
   - task: security-scan
     file: web-ui/ci/security-scan.yml
     input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Tag Stories
   max_in_flight: 1
@@ -82,7 +103,15 @@ jobs:
     passed: [Unit Test]
   - task: tag-stories
     file: web-ui/ci/tag-stories.yml
-    input_mapping: {code-repo: web-ui}    
+    input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
+    
     
 - name: Build Artifact
   max_in_flight: 1
@@ -93,7 +122,14 @@ jobs:
     passed: [Code Quality,Security Scan,Tag Stories]
   - task: build
     file: web-ui/ci/java-build-artifact.yml
-    input_mapping: {code-repo: web-ui} 
+    input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
 
 - name: Deploy
   max_in_flight: 1
@@ -104,7 +140,14 @@ jobs:
     passed: [Build Artifact]
   - task: build
     file: web-ui/ci/java-deploy.yml
-    input_mapping: {code-repo: web-ui} 
+    input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Smoke Test
   max_in_flight: 1
@@ -114,7 +157,14 @@ jobs:
     passed: [Deploy]
   - task: smoke-test
     file: web-ui/ci/functional-test.yml
-    input_mapping: {code-repo: web-ui}   
+    input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Regression Test
   max_in_flight: 1
@@ -124,4 +174,11 @@ jobs:
     passed: [Smoke Test]
   - task: regression-test
     file: web-ui/ci/functional-test.yml
-    input_mapping: {code-repo: web-ui}  
+    input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: QAHub-Clara
+        icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"

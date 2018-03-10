@@ -7,7 +7,7 @@ image_resource:
     tag: 7-jre-alpine
   
 inputs:
-- name: code-repo
+- name: web-ui
 
 #outputs:
 #- name: tests

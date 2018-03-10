@@ -11,7 +11,6 @@ resources:
 #    uri: https://github.com/LableOrg/java-maven-junit-helloworld.git
 #    branch: master
 
-resources:
 - name: slack
   type: slack-notification
   source:

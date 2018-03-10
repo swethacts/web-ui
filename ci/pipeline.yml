@@ -5,21 +5,38 @@ resources:
     uri: https://github.com/jogijatin15/web-ui.git
     branch: con-rbc-smoke
     
+- name: backend
+  type: git
+  source:
+    uri: https://github.com/LableOrg/java-maven-junit-helloworld.git
+    branch: master
+    
 jobs:
 - name: Version
   max_in_flight: 1
   plan:
   - get: web-ui
     trigger: true
-  - task: Versioning
+  - task: version
     file: web-ui/ci/version.yml
     input_mapping: {code-repo: web-ui}
+    
+- name: Unit Test
+  max_in_flight: 1
+  plan:
+  - get: backend
+    trigger: true
+    passed: [Version]
+  - task: unit-test
+    file: backend/ci/java-unit-test.yml
+    input_mapping: {code-repo: backend}
+    
 - name: Smoke Test
   max_in_flight: 1
   plan:
   - get: web-ui
     trigger: true
-    passed: [Version]
+    passed: [Unit Test]
   - task: smoke-test
     file: web-ui/ci/functional-test.yml
     input_mapping: {code-repo: web-ui}   

@@ -10,6 +10,18 @@ resources:
 #  source:
 #    uri: https://github.com/LableOrg/java-maven-junit-helloworld.git
 #    branch: master
+
+resources:
+- name: slack
+  type: slack-notification
+  source:
+    url: https://hooks.slack.com/services/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
+    
+resource_types:
+- name: slack-notification
+  type: docker-image
+  source:
+    repository: cfcommunity/slack-notification-resource
     
 jobs:
 - name: Version
@@ -21,6 +33,13 @@ jobs:
   - task: version
     file: web-ui/ci/version.yml
     input_mapping: {code-repo: web-ui}
+    on_success:
+      put: slack
+      params:        
+        channel: "#test-feeds"
+        username: concourse
+        icon_url: https://avatars1.githubusercontent.com/u/7809479?v=3&s=200
+        text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME failed versioning! <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
 - name: Unit Test
   max_in_flight: 1

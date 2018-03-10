@@ -8,11 +8,14 @@ image_resource:
   
 inputs:
 - name: web-ui
-- name: code-repo
 
 #outputs:
 #- name: tests
 
+#run:
+#  dir: code-repo
+#  path: ../web-ui/ci/scripts/java-unit-test-maven.sh
+
 run:
-  dir: code-repo
-  path: ../web-ui/ci/scripts/java-unit-test-maven.sh
+  path: sh
+  args: ['./web-ui/ci/scripts/java-unit-test-maven.sh']

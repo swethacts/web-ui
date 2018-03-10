@@ -15,6 +15,7 @@ jobs:
 - name: Version
   max_in_flight: 1
   plan:
+  - get: backend
   - get: web-ui
     trigger: true
   - task: version

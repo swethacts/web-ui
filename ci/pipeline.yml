@@ -1,0 +1,15 @@
+resources:
+- name: web-ui
+  type: git
+  source:
+    uri: https://github.com/jogijatin15/web-ui.git
+    branch: con-rbc-smoke
+    
+jobs:
+- name: Smoke Test
+  max_in_flight: 1
+  plan:
+  - get: web-ui
+    trigger: true
+  - task: smoke-test
+    file: web-ui/ci/functional-test.yml

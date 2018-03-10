@@ -7,8 +7,8 @@ image_resource:
 inputs:
 - name: web-ui
 
-outputs:
-- name: tests
+#outputs:
+#- name: tests
 
 run:
   path: sh

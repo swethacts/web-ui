@@ -32,13 +32,78 @@ jobs:
   - task: unit-test
     file: web-ui/ci/java-unit-test-maven.yml
     input_mapping: {code-repo: web-ui}
+
+- name: Code Quality
+  max_in_flight: 1
+  plan:
+  #- get: backend
+  - get: web-ui
+    trigger: true
+    passed: [Unit Test]
+  - task: sonar-scan
+    file: web-ui/ci/code-quality.yml
+    input_mapping: {code-repo: web-ui}
+    
+- name: Security Scan
+  max_in_flight: 1
+  plan:
+  #- get: backend
+  - get: web-ui
+    trigger: true
+    passed: [Unit Test]
+  - task: security-scan
+    file: web-ui/ci/security-scan.yml
+    input_mapping: {code-repo: web-ui}
+    
+- name: Tag Stories
+  max_in_flight: 1
+  plan:
+  #- get: backend
+  - get: web-ui
+    trigger: true
+    passed: [Unit Test]
+  - task: tag-stories
+    file: web-ui/ci/tag-stories.yml
+    input_mapping: {code-repo: web-ui}    
+    
+- name: Build Artifact
+  max_in_flight: 1
+  plan:
+  #- get: backend
+  - get: web-ui
+    trigger: true
+    passed: [Code Quality,Security Scan,Tag Stories]
+  - task: build
+    file: web-ui/ci/java-build-artifact.yml
+    input_mapping: {code-repo: web-ui} 
+
+- name: Deploy
+  max_in_flight: 1
+  plan:
+  #- get: backend
+  - get: web-ui
+    trigger: true
+    passed: [Build Artifact]
+  - task: build
+    file: web-ui/ci/java-deploy.yml
+    input_mapping: {code-repo: web-ui} 
     
 - name: Smoke Test
   max_in_flight: 1
   plan:
   - get: web-ui
     trigger: true
-    passed: [Unit Test]
+    passed: [Deploy]
   - task: smoke-test
     file: web-ui/ci/functional-test.yml
     input_mapping: {code-repo: web-ui}   
+    
+- name: Regression Test
+  max_in_flight: 1
+  plan:
+  - get: web-ui
+    trigger: true
+    passed: [Smoke Test]
+  - task: regression-test
+    file: web-ui/ci/functional-test.yml
+    input_mapping: {code-repo: web-ui}  

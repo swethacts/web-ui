@@ -1,0 +1,17 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: openjdk
+    tag: 7-jre-alpine
+  
+inputs:
+- name: web-ui
+
+#outputs:
+#- name: tests
+
+run:
+  path: sh
+  args: ['./web-ui/ci/scripts/tag-stories.sh']

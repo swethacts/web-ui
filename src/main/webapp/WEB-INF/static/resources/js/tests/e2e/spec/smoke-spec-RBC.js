@@ -38,7 +38,8 @@ describe('RBC Royal Bank application', function() {
 
    it('should display About Us Page', function() {
          application.goToAboutRBC();       
-         expect(browser.getTitle()).toContain('AboutUS');
+         //expect(browser.getTitle()).toContain('AboutUS');
+		 expect(browser.getTitle()).toContain('Canada - RBC');
    });
      
 });

@@ -25,10 +25,11 @@ jobs:
   max_in_flight: 1
   plan:
   - get: backend
-    trigger: true
+    trigger: true    
     passed: [Version]
+  - get: web-ui  
   - task: unit-test
-    file: backend/ci/java-unit-test.yml
+    file: web-ui/ci/java-unit-test.yml
     input_mapping: {code-repo: backend}
     
 - name: Smoke Test

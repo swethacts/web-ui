@@ -7,11 +7,12 @@ image_resource:
     tag: 3.5.3-alpine
   
 inputs:
-- name: backend
+- name: web-ui
+- name: code-repo
 
 #outputs:
 #- name: tests
 
 run:
-  path: sh
-  args: ['./backend/ci/scripts/java-unit-test-maven.sh']
+  dir: code-repo
+  path: ../web-ui/ci/scripts/java-unit-test-maven.sh

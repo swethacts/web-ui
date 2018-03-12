@@ -15,7 +15,7 @@ resources:
   type: slack-notification
   source:
     url: https://hooks.slack.com/services/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
-    
+
 resource_types:
 - name: slack-notification
   type: docker-image
@@ -36,7 +36,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -54,7 +54,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
 
@@ -72,7 +72,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -90,7 +90,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -108,7 +108,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -127,7 +127,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
 
@@ -145,7 +145,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -162,7 +162,7 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"
     
@@ -179,6 +179,6 @@ jobs:
       put: slack
       params:        
         channel: "#qahub"
-        username: qahub-bot
+        username: concourse
         icon_url: https://avatars2.githubusercontent.com/u/36465201?v=4&s=200
         text: "$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME Passed ! <$ATC_EXTERNAL_URL:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|  Click for details.>"

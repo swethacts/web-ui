@@ -14,7 +14,7 @@ resources:
 - name: slack
   type: slack-notification
   source:
-    url: https://hooks.slack.com/services/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
+    url: https://hooks.slack.com/services/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
     
 resource_types:
 - name: slack-notification

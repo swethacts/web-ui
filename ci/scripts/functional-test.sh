@@ -6,6 +6,9 @@ export DISPLAY=:99
 bash /etc/init.d/xvfb start
 ls -las
 
+PASSED_TESTS=6
+TOTAL_TESTS=7
+
 echo "Functional test cases..."
 
 mkdir tests
@@ -50,17 +53,14 @@ ls -ltr
 #fi
 
 THRESHOLD=$SMOKE_TEST_THRESHOLD
-PASSED_TESTS=6
-TOTAL_TESTS=7
 PASSED_TESTS_PERCENT=$((PASSED_TESTS*100))
-echo $PASSED_TESTS_PERCENT
 PASS_RATE=$(( PASSED_TESTS_PERCENT / TOTAL_TESTS ))
-echo "Pass rate is "$PASS_RATE
+echo "Pass Rate is "$PASS_RATE
 
 if [ "$PASS_RATE" -ge "$THRESHOLD" ]
 then
-	echo "test passed"
+	echo "Pass Rate is greater than or equal to Threshold. Pipeline will continue to execute further"	
 else
-	echo "test failed"
+	echo "Pass Rate is lower than Threshold, this build will fail now. Pipeline will not continue further"
 	exit 1
 fi

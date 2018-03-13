@@ -51,9 +51,11 @@ ls -ltr
 #fi
 
 THRESHOLD=$INTEGRATION_TEST_THRESHOLD
+echo "Threshold set for Pass Rate is "$THRESHOLD
+
 PASSED_TESTS_PERCENT=$((PASSED_TESTS*100))
 PASS_RATE=$(( PASSED_TESTS_PERCENT / TOTAL_TESTS ))
-echo "Pass Rate is "$PASS_RATE
+echo "Actual Pass Rate is "$PASS_RATE
 
 if [ "$PASS_RATE" -ge "$THRESHOLD" ]
 then

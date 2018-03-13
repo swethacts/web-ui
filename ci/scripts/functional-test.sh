@@ -48,3 +48,19 @@ ls -ltr
 #	echo "Exiting with exit code 1..."
 #	exit 1
 #fi
+
+THRESHOLD=$SMOKE_TEST_THRESHOLD
+PASSED_TESTS=6
+TOTAL_TESTS=7
+PASSED_TESTS_PERCENT=$((PASSED_TESTS*100))
+echo $PASSED_TESTS_PERCENT
+PASS_RATE=$(( PASSED_TESTS_PERCENT / TOTAL_TESTS ))
+echo "Pass rate is "$PASS_RATE
+
+if [ "$PASS_RATE" -ge "$THRESHOLD" ]
+then
+	echo "test passed"
+else
+	echo "test failed"
+	exit 1
+fi

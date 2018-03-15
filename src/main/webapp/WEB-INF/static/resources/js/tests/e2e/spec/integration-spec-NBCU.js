@@ -38,7 +38,7 @@ describe('NBCUniversal application', function() {
 
    it('should display Businesses Page', function() {
          application.goToBusinesses();
-         expect(browser.getTitle()).toContain('OurBusinesses'); //NBCUniversal
+         expect(browser.getTitle()).toContain('Careers'); //NBCUniversal
    });
 
 });

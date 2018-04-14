@@ -9,7 +9,7 @@ ls -las
 PASSED_TESTS=6
 TOTAL_TESTS=7
 
-echo "Functional test cases..."
+echo "integration test cases..."
 
 mkdir tests
 chmod 777 tests
@@ -26,10 +26,10 @@ echo "Webdriver starting..."
 nohup webdriver-manager start &
 sleep 5
 
-echo "Functional test cases execution staring ..."
+echo "integration test cases execution staring ..."
 protractor protractor.conf.js
 
-#if [ $? -ne 0 ]; then  
+#if [ $? -ne 0 ]; then
 #	TEST_FAILURE=1
 #fi
 
@@ -59,7 +59,7 @@ echo "Pass Rate is "$PASS_RATE
 
 if [ "$PASS_RATE" -ge "$THRESHOLD" ]
 then
-	echo "Pass Rate:"$PASS_RATE "is greater than or equal to expected Threshold:"$THRESHOLD ".ci-cd pipeline will continue to execute further"	
+	echo "Pass Rate:"$PASS_RATE "is greater than or equal to expected Threshold:"$THRESHOLD ".ci-cd pipeline will continue to execute further"
 else
 	echo "Pass Rate:"$PASS_RATE "is less than expected Threshold:"$THRESHOLD ".ci-cd pipeline will not continue to execute further"
 	exit 1

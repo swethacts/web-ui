@@ -48,7 +48,7 @@ pipeline {
 
 					slackSend color: "78909C", message: "Executing TestCase 6: *Forgot Password Page Validation*"
 					sh 'sleep 7'
-          slackSend color: "ff0000", message: "TestCase 7: *FAILED*"
+          slackSend color: "ff0000", message: "TestCase 6: *FAILED*"
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"

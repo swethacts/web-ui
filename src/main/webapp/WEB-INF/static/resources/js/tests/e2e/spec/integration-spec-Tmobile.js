@@ -1,6 +1,6 @@
 var Application = require('./page/page-integration-Tmobile.js');
 
-describe('NBCUniversal application', function() {
+describe('T-MOBILE.COM application', function() {
 	var application = new Application();
    beforeEach(function() {
 

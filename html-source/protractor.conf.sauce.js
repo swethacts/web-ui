@@ -10,7 +10,7 @@ exports.config = {
 	//'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
 	//'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-NBCU.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-Tmobile.js'
 
     ],
 
@@ -26,7 +26,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
-	name: 'NBCUniversal Smoke Tests',
+	name: 'T-MOBILE Smoke Tests',
 	//screenResolution:'1024x768',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,

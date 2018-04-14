@@ -31,19 +31,19 @@ pipeline {
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
 					slackSend color: "78909C", message: "Executing TestCase 2: *My T-Mobile Page Validation*"
-					sh 'sleep 5'
+					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
           slackSend color: "78909C", message: "Executing TestCase 3: *ERROR for null EMAIL OR PHONE# Validation*"
-					sh 'sleep 5'
+					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 
           slackSend color: "78909C", message: "Executing TestCase 4: *ERROR for Invalid PHONE# Validation*"
-					sh 'sleep 5'
+					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
 
           slackSend color: "78909C", message: "Executing TestCase 5: *ERROR for Incorrect Login Credentials Validation*"
-					sh 'sleep 7'
+					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 5: *PASSED*"
 
 

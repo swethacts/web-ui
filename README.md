@@ -26,5 +26,4 @@ This will start up a Selenium Server and will output a bunch of info logs. Your 
 
 ## Execute suite(s).
 protractor protractor.conf.js  
-#Test
-# test 123 4567
+

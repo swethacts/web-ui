@@ -6,12 +6,12 @@ describe('IHG application', function() {
 
    });
 
-   it('should display HOME Page', function() {
+   it('should display HOME Page on Mobile Device', function() {
          application.gotToHome();
          expect(browser.getTitle()).toContain('IHG');
    });
 
-   it('should display Select a Hotel Page', function() {
+   it('should display Select a Hotel Page on Mobile Device', function() {
          application.gotToSearch();
          expect(browser.getTitle()).toContain('Select a Hotel');
    });

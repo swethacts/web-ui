@@ -9,10 +9,10 @@ pipeline {
 					slackSend color: "229954", message: "Starting *Integration Testing* Job													"
 
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Integration Tests on https://www.t-mobile.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Integration Tests on https://www.ihg.com` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
-					sh 'echo "Starting Integration Test Execution on https://www.t-mobile.com/"'
+					sh 'echo "Starting Integration Test Execution on https://www.ihg.com"'
 
 					sh '''
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -30,22 +30,17 @@ pipeline {
 					sh 'sleep 1'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
-					slackSend color: "78909C", message: "Executing TestCase 2: *My T-Mobile Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 2: *Location Page Validation*"
 					sh 'sleep 8'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
-          slackSend color: "78909C", message: "Executing TestCase 3: *ERROR for null EMAIL OR PHONE# Validation*"
-					sh 'sleep 8'
+          slackSend color: "78909C", message: "Executing TestCase 3: *Stay Page Validation*"
+					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 
-          slackSend color: "78909C", message: "Executing TestCase 4: *ERROR for Invalid PHONE# Validation*"
-					sh 'sleep 8'
-					slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
-
-          slackSend color: "78909C", message: "Executing TestCase 5: *ERROR for Incorrect Login Credentials Validation*"
-					sh 'sleep 8'
-					slackSend color: "2196F3", message: "TestCase 5: *PASSED*"
-
+          slackSend color: "78909C", message: "Executing TestCase 4: *Our Brands Validation*"
+					sh 'sleep 5'
+					slackSend color: "ff0000", message: "TestCase 4: *FAILED*"
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"

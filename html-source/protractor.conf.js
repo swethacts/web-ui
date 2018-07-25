@@ -6,26 +6,45 @@ exports.config = {
 
     //Location of E2E test specs
     specs: [
+<<<<<<< Updated upstream
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'
 	 //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
      '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-Tmobile.js'
+=======
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
+	//'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
+	//'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
+
+>>>>>>> Stashed changes
     ],
 
 	//Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored
 	//directConnect: true,
 
 	//Sauce Labs - While using sauce, comment the seleniumAddress
+<<<<<<< Updated upstream
   	sauceUser: process.env.SAUCE_USERNAME,
     sauceKey: process.env.SAUCE_ACCESS_KEY,
+=======
+  	sauceUser: 'Cognizant_Integration',
+    sauceKey: 'a90e4692-648f-49b8-9691-b372a9973c12',
+>>>>>>> Stashed changes
 
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
+<<<<<<< Updated upstream
 	name: 'T-MOBILE Smoke Tests',
+=======
+	name: 'IHG Smoke Tests',
+	//screenResolution:'1024x768',
+>>>>>>> Stashed changes
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,
@@ -34,7 +53,12 @@ exports.config = {
 	chromeOptions: {
 		//args: ['no-sandbox', '--start-fullscreen']
 		//args: ['no-sandbox','headless']
+<<<<<<< Updated upstream
 		args: ['no-sandbox']
+=======
+		//args: ['no-sandbox']
+		args: ['no-sandbox', '--start-maximized']
+>>>>>>> Stashed changes
 	}
 
 	//proxy: {

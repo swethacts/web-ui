@@ -9,7 +9,11 @@ exports.config = {
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/forgotPasswordHealthFirstPageSpec.js',
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
+<<<<<<< Updated upstream
     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-Tmobile.js'      
+=======
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'      
+>>>>>>> Stashed changes
     ],
 
 	//Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored

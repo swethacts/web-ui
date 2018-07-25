@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream:html-source/protractor.conf.headless.js
-NBCU	exports.config = {
+	exports.config = {
 
     //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
     //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
@@ -7,25 +6,10 @@ NBCU	exports.config = {
 
     //Location of E2E test specs
     specs: [
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-Tmobile.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'
-=======
-exports.config = {
-
-    //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
-    //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
-    //seleniumAddress: 'http://localhost:4444/wd/hub',
-
-    //Location of E2E test specs
-    specs: [
-     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
-     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'
-	 //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
-     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
->>>>>>> Stashed changes:html-source/protractor.conf.saucelabs.js
     ],
 
 	//Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored
@@ -38,14 +22,8 @@ exports.config = {
     // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
-<<<<<<< Updated upstream:html-source/protractor.conf.headless.js
     //version: 'latest',
 	//platform: 'Windows 7',
-=======
-    version: 'latest',
-	platform: 'macOS 10.13',
-	name: 'IHG Smoke Tests',
->>>>>>> Stashed changes:html-source/protractor.conf.saucelabs.js
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

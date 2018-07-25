@@ -10,7 +10,7 @@ exports.config = {
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'
 	 //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
      //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/integration-spec-Tmobile.js'
+     '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/integration-spec-IHG.js'
     ],
 
 	//Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored
@@ -25,7 +25,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
 	platform: 'macOS 10.13',
-	name: 'T-MOBILE Integration Tests',
+	name: 'IHG Integration Tests',
 	//'time-zone': 'Detroit',
 	// maxSessions: 2,
 	//shardTestFiles: true,

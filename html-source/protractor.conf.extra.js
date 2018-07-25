@@ -1,4 +1,4 @@
-NBCU	exports.config = {
+	exports.config = {
 
     //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
     //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
@@ -6,7 +6,7 @@ NBCU	exports.config = {
 
     //Location of E2E test specs
     specs: [
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/integration-spec-IHG.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'

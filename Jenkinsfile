@@ -1,18 +1,18 @@
 pipeline {
   agent none
   stages {
-    stage('Smoke Testing') {
+    stage('Mobile Testing') {
 	  agent { docker 'weremsoft/gulp-xvfb-headless-chrome-protractor' }
       steps {
 			parallel(
-				Smoke: {
-					slackSend color: "229954", message: "Starting *Smoke Testing* Job													"
+				Mobile: {
+					slackSend color: "229954", message: "Starting *Mobile Testing* Job													"
 
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://www.ihg.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Mobile Tests on https://www.ihg.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
-					sh 'echo "Starting Smoke Test Execution on https://www.ihg.com/"'
+					sh 'echo "Starting Mobile Test Execution on https://www.ihg.com/"'
 
 					sh '''
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -22,21 +22,21 @@ pipeline {
 					sh 'echo "Archieving junit xml test results"'
 					junit 'tests/*.xml'
 
-					sh 'echo "Smoke Test Execution Complete"'
+					sh 'echo "Mobile Test Execution Complete"'
 				},
 				Notifications: {
-					sh 'sleep 10'
+					sh 'sleep 180'
 					slackSend color: "78909C", message: "Executing TestCase 1: *Home Page Validation*"
-					sh 'sleep 3'
+					sh 'sleep 30'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
 					slackSend color: "78909C", message: "Executing TestCase 2: *Search a hotel Validation*"
-					sh 'sleep 7'
+					sh 'sleep 30'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"
-					slackSend color: "cceef9", message: "`Smoke Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<${env.SauceLabsVideo}|SauceLabs Video>)"
+					slackSend color: "cceef9", message: "`Mobile Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<${env.SauceLabsVideo}|SauceLabs Video>)"
 
 				}
 			)

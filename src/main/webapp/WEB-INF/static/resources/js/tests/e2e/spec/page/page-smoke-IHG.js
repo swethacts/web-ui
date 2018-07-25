@@ -13,7 +13,7 @@
     };
 
 		this.gotToSearch = function() {
-				zip.click();
+				zip.sendKeys("30339");
 				searchButton.click();
 				browser.driver.sleep(1000);
 		};

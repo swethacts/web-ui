@@ -1,4 +1,4 @@
-var Application = require('./page/page-smoke-RBC.js');
+var Application = require('./page/page-smoke-IHG.js');
 
 describe('IHG application', function() {
 	var application = new Application();

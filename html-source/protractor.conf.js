@@ -22,10 +22,13 @@ exports.config = {
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    browserName: 'chrome',
-    version: 'latest',
-    platform: 'macOS 10.13',
-    name: 'IHG Smoke Tests',
+    name: 'IHG Mobile Tests',
+    appiumVersion: '1.8.0',
+    deviceName: 'iPhone 8 Plus Simulator',
+    deviceOrientation: 'portrait',
+    platformVersion: '11.2',
+    platformName: 'iOS',
+    browserName: 'Safari',
     //'time-zone': 'Detroit',
     // maxSessions: 2,
     //shardTestFiles: true,

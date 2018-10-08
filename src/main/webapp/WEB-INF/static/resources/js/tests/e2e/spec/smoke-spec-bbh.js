@@ -26,7 +26,4 @@ describe('BBH application', function() {
          expect(browser.getTitle()).toContain('Site Map');
    });
 
-
-
-
 });

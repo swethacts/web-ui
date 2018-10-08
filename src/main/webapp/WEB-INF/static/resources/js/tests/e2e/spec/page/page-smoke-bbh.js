@@ -13,17 +13,17 @@
     	browser.driver.sleep(4000);
     };
 
-		this.gotTopb = function() {
+		this.goTopb = function() {
 				pb.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.gotTopp = function() {
+		this.goTopp = function() {
 				pp.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.gotTosm = function() {
+		this.goTosm = function() {
 				sm.click();
 				browser.driver.sleep(1000);
 		};

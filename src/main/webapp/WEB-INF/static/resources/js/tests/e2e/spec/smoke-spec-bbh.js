@@ -12,12 +12,12 @@ describe('BBH application', function() {
    });
 
 	 it('should display Private Banking Page', function() {
-	 			application.gotTopb();
+	 			application.goTopb();
 	 			expect(browser.getTitle()).toContain('Private Banking');
 	 });
 
 	 it('should display Privacy Policy Page', function() {
-				 application.gotTopp();
+				 application.goTopp();
 				 expect(browser.getTitle()).toContain('Privacy Policy');
 	 });
 

@@ -25,7 +25,7 @@ pipeline {
 					sh 'echo "Smoke Test Execution Complete"'
 				},
 				Notifications: {
-					sh 'sleep 10'
+					sh 'sleep 15'
 					slackSend color: "78909C", message: "Executing TestCase 1: *Home Page Validation*"
 					sh 'sleep 3'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"

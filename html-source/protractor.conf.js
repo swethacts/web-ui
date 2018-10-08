@@ -10,7 +10,7 @@ exports.config = {
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-bbh.js'
   ],
 
   //Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored
@@ -25,7 +25,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
     platform: 'macOS 10.13',
-    name: 'IHG Smoke Tests',
+    name: 'bbh Smoke Tests',
     //'time-zone': 'Detroit',
     // maxSessions: 2,
     //shardTestFiles: true,

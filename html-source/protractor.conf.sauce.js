@@ -10,7 +10,7 @@ exports.config = {
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-IHG.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-bbh.js'
 
   ],
 
@@ -26,7 +26,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
     platform: 'macOS 10.13',
-    name: 'IHG Smoke Tests',
+    name: 'bbh Smoke Tests',
     //screenResolution:'1024x768',
     //'time-zone': 'Detroit',
     // maxSessions: 2,

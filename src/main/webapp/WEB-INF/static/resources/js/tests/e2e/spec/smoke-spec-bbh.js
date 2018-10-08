@@ -11,9 +11,9 @@ describe('BBH application', function() {
          expect(browser.getTitle()).toContain('Brown Brothers Harriman');
    });
 
-	 it('should display Insights Page', function() {
+	 it('should display bicentennial Page', function() {
 				 application.gotToIM();
-				 expect(browser.getTitle()).toContain('Insights');
+				 expect(browser.getTitle()).toContain('bicentennial');
 	 });
 
 	 it('should display Investor Services Page', function() {

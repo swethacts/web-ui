@@ -1,7 +1,7 @@
 (function () {
 	var QHHomepage = function () {
 		var pb = element(by.linkText('Private Banking'));
-		var im = element(by.linkText('Insights'));
+		var im = element(by.linkText('Bicentennial'));
 		var is = element(by.linkText('Investor Services'));
 
     browser.ignoreSynchronization = true;

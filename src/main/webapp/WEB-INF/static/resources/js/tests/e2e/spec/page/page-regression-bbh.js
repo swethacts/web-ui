@@ -1,8 +1,8 @@
 (function () {
 	var QHHomepage = function () {
-		// var login = element(by.css('li.client-login.worldviewClick > span.WorldViewLogin'));
+		var login = element(by.css('li.client-login.worldviewClick > span.WorldViewLogin'));
 		// var login = element(by.linkText('CLIENT LOGIN'));
-		var login = element(by.linkText('Client Login'));
+		// var login = element(by.linkText('Client Login'));
 		var user = element(by.id('userid'));
 		var password = element(by.id('password'));
 		var submit = element(by.css('#dWorldViewAvailable > button'));

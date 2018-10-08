@@ -19,12 +19,12 @@
 		};
 
 		this.gotTopp = function() {
-				im.click();
+				pp.click();
 				browser.driver.sleep(1000);
 		};
 
 		this.gotTosm = function() {
-				is.click();
+				sm.click();
 				browser.driver.sleep(1000);
 		};
 

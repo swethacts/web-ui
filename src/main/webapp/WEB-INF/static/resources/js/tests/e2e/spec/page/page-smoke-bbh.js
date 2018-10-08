@@ -1,6 +1,6 @@
 (function () {
 	var QHHomepage = function () {
-		var pb = element(by.linkText('PRIVATE BANKING'));
+		var pb = element(by.linkText('Private Banking'));
 		var im = element(by.linkText('INVESTMENT MANAGEMENT'));
 		var is = element(by.linkText('INVESTOR SERVICES'));
 

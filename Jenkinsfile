@@ -9,10 +9,10 @@ pipeline {
 					slackSend color: "229954", message: "Starting *Smoke Testing* Job													"
 
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://www.ihg.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Smoke Tests on https://www.bbh.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
-					sh 'echo "Starting Smoke Test Execution on https://www.ihg.com/"'
+					sh 'echo "Starting Smoke Test Execution on https://www.bbh.com/"'
 
 					sh '''
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -30,9 +30,17 @@ pipeline {
 					sh 'sleep 3'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
-					slackSend color: "78909C", message: "Executing TestCase 2: *Search a hotel Validation*"
-					sh 'sleep 7'
+					slackSend color: "78909C", message: "Executing TestCase 2: *Private Banking Landing Page Validation*"
+					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
+
+          slackSend color: "78909C", message: "Executing TestCase 3: *Investment Management Landing Page Validation*"
+          sh 'sleep 5'
+          slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
+
+          slackSend color: "78909C", message: "Executing TestCase 4: *Investor Services Validation*"
+          sh 'sleep 5'
+          slackSend color: "2196F3", message: "TestCase 4: *PASSED*"
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"

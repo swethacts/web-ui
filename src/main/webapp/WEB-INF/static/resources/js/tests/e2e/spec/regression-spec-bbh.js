@@ -19,7 +19,7 @@ describe('BBH application', function() {
 	 it('should display Error Page', function() {
 	 			application.goToLogin();
 				var foo = element(by.css('#loginForm > p.g-color-red'));
-				expect(foo.getText()).toEqual('Invalid user ID and/or password');
+				expect(foo.getText()).toEqual('valid user ID and/or password');
 	 });
 
 

@@ -34,7 +34,7 @@ pipeline {
 					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
-          slackSend color: "78909C", message: "Executing TestCase 3: *Investment Management Landing Page Validation*"
+          slackSend color: "78909C", message: "Executing TestCase 3: *Insights Landing Page Validation*"
           sh 'sleep 5'
           slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 

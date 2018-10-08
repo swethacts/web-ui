@@ -16,9 +16,9 @@ describe('BBH application', function() {
          expect(browser.getTitle()).toContain('Private Banking');
    });
 
-	 it('should display Investment Management Page', function() {
+	 it('should display Insights Page', function() {
          application.gotToIM();
-         expect(browser.getTitle()).toContain('Investment Management');
+         expect(browser.getTitle()).toContain('Insights');
    });
 
 	 it('should display Investor Services Page', function() {

@@ -8,8 +8,8 @@ exports.config = {
   specs: [
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/forgotPasswordHealthFirstPageSpec.js',
-    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-bbh.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regressionHealthFirstPageSpec.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regression-spec-bbh.js'
   ],
 
   //Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored

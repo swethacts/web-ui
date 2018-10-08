@@ -7,10 +7,10 @@ exports.config = {
   //Location of E2E test specs
   specs: [
     //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/signUpHealthFirstPageSpec.js'
-    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
-    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHealthFirstPageSpec.js'
-    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smokeHFOrgSpec.js'
-    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/smoke-spec-bbh.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regressionHealthFirstPageSpec.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regressionHealthFirstPageSpec.js'
+    //'../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regressionHFOrgSpec.js'
+    '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/spec/regression-spec-bbh.js'
 
   ],
 
@@ -26,7 +26,7 @@ exports.config = {
     browserName: 'chrome',
     version: 'latest',
     platform: 'macOS 10.13',
-    name: 'bbh Smoke Tests',
+    name: 'bbh regression Tests',
     //screenResolution:'1024x768',
     //'time-zone': 'Detroit',
     // maxSessions: 2,

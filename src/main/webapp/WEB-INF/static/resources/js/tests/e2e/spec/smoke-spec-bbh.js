@@ -11,18 +11,20 @@ describe('BBH application', function() {
          expect(browser.getTitle()).toContain('Brown Brothers Harriman');
    });
 
-   it('should display Private Banking Page', function() {
-         application.gotToPB();
-         expect(browser.getTitle()).toContain('Private Banking');
-   });
-
 	 it('should display Insights Page', function() {
-         application.gotToIM();
-         expect(browser.getTitle()).toContain('Insights');
-   });
+				 application.gotToIM();
+				 expect(browser.getTitle()).toContain('Insights');
+	 });
 
 	 it('should display Investor Services Page', function() {
          application.goToIS();
          expect(browser.getTitle()).toContain('Investor Services');
    });
+
+   it('should display Private Banking Page', function() {
+         application.gotToPB();
+         expect(browser.getTitle()).toContain('Private Banking');
+   });
+
+
 });

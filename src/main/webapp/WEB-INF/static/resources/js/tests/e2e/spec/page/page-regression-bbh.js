@@ -1,8 +1,10 @@
 (function () {
 	var QHHomepage = function () {
+
+		var search = element(by.id('searchterm'));
+		var searchButton = element(by.css('#previewSearchForm > input[value="Search"]'));
+
 		var login = element(by.css('li.client-login.worldviewClick > span.WorldViewLogin'));
-		// var login = element(by.linkText('CLIENT LOGIN'));
-		// var login = element(by.linkText('Client Login'));
 		var user = element(by.id('userid'));
 		var password = element(by.id('password'));
 		var submit = element(by.css('#dWorldViewAvailable > button'));
@@ -15,6 +17,12 @@
     	browser.waitForAngular();
     	browser.driver.sleep(4000);
     };
+
+		this.goToSearch = function() {
+				search.sendKeys("high net worth individual");
+				searchButton.click();
+				browser.driver.sleep(1000);
+		};
 
 		this.goToLogin = function() {
 				login.click();

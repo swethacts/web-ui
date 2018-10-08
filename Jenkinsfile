@@ -30,11 +30,13 @@ pipeline {
 					sh 'sleep 3'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
-					slackSend color: "78909C", message: "Executing TestCase 2: *Private Banking Landing Page Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 2: *Search Validation*"
 					sh 'sleep 2'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
-          
+          slackSend color: "78909C", message: "Executing TestCase 3: *Invalid Login Validation*"
+          sh 'sleep 2'
+          slackSend color: "2196F3", message: "TestCase 3: *PASSED*"
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"

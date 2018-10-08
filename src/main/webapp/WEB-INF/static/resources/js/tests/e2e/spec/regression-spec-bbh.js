@@ -11,9 +11,15 @@ describe('BBH application', function() {
          expect(browser.getTitle()).toContain('Brown Brothers Harriman');
    });
 
+	 it('should display Search Page', function() {
+	 		 application.goToSearch();
+	 		 expect(browser.getTitle()).toContain('Search');
+	 });
+
 	 it('should display Error Page', function() {
 	 			application.goToLogin();
-	 			expect(browser.getTitle()).toContain('Private Banking');
+				var foo = element(by.css('#loginForm > p.g-color-red'));
+				expect(foo.getText()).toEqual('Invalid user ID and/or password');
 	 });
 
 

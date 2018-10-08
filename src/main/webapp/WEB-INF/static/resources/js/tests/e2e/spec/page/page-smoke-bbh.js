@@ -1,8 +1,8 @@
 (function () {
 	var QHHomepage = function () {
 		var pb = element(by.linkText('Private Banking'));
-		var im = element(by.linkText('INVESTMENT MANAGEMENT'));
-		var is = element(by.linkText('INVESTOR SERVICES'));
+		var im = element(by.linkText('Investment Management'));
+		var is = element(by.linkText('Investor Services'));
 
     browser.ignoreSynchronization = true;
     browser.get('https://www.bbh.com/en-us');

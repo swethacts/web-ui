@@ -1,8 +1,8 @@
 (function () {
 	var QHHomepage = function () {
 		var pb = element(by.linkText('Private Banking'));
-		var im = element(by.linkText('Bicentennial'));
-		var is = element(by.linkText('Investor Services'));
+		var pp = element(by.linkText('Privacy Policy'));
+		var sm = element(by.linkText('Site Map'));
 
     browser.ignoreSynchronization = true;
     browser.get('https://www.bbh.com/en-us');
@@ -13,17 +13,17 @@
     	browser.driver.sleep(4000);
     };
 
-		this.gotToPB = function() {
+		this.gotTopb = function() {
 				pb.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.gotToIM = function() {
+		this.gotTopp = function() {
 				im.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.gotToIS = function() {
+		this.gotTosm = function() {
 				is.click();
 				browser.driver.sleep(1000);
 		};

@@ -1,6 +1,6 @@
 (function () {
 	var QHHomepage = function () {
-		var tacologin = element(by.css('.login-link'));
+		var tacologin = element(by.css('a.greeting'));
 		var tacouser = element(by.id('sign-in-email'));
 		var tacopassword = element(by.id('sign-in-password'));
 		var tacosubmit = element(by.id('js-sign-in-profile'));

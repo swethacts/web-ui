@@ -19,8 +19,8 @@ describe('Taco application', function() {
 
 	 it('should display user prompt for Duplicate Registration', function() {
 			 application.goToAccountCreation();
-			 var foo = element(by.css('.validation-msg-container'));
-			 expect(foo.getText()).toContain("This email address can't be used");
+			 var foo1 = element(by.css('.validation-msg-container'));
+			 expect(foo1.getText()).toContain("This email address can't be used");
 	});
 
 });

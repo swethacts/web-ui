@@ -17,7 +17,7 @@ describe('Taco application', function() {
 				expect(foo.getText()).toContain("Please reset your password and try again");
 	 });
 
-	 it('should display user prompt for Duplicate Registration', function() {
+	 it('should display Error Message for Email ID already in use', function() {
 			 application.goToAccountCreation();
 			 var foo1 = element(by.css('.has-error .validation-msg-container'));
 			 expect(foo1.getText()).toContain("This email address can't be used");

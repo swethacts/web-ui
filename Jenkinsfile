@@ -34,7 +34,7 @@ pipeline {
 					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
-          slackSend color: "78909C", message: "Executing TestCase 3: *Account Creation Error Validation*"
+          slackSend color: "78909C", message: "Executing TestCase 3: *Account Creation Duplicate Email Validation*"
           sh 'sleep 7'
           slackSend color: "ff0000", message: "TestCase 3: *FAILED*"
 

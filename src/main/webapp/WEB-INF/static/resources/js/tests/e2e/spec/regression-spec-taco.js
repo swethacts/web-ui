@@ -24,6 +24,3 @@ describe('Taco application', function() {
 	});
 
 });
-
-
-#register\2e firstName

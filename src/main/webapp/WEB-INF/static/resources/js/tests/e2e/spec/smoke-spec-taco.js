@@ -11,17 +11,17 @@ describe('Taco Bell application', function() {
          expect(browser.getTitle()).toContain('Taco Bell');
    });
 
-	 it('should display Private Banking Page', function() {
+	 it('should display FOOD Page', function() {
 	 			application.goToFood();
 	 			expect(browser.getTitle()).toContain('Taco Bell Menu');
 	 });
 
-	 it('should display Privacy Policy Page', function() {
+	 it('should display FAVORITES Page', function() {
 				 application.goToFavorites();
 				 expect(browser.getTitle()).toContain('Your Taco Bell Favorites');
 	 });
 
-	 it('should display Site Map Page', function() {
+	 it('should display LOCATIONS Page', function() {
          application.goToLocations();
          expect(browser.getTitle()).toContain('Taco Bell Locations');
    });

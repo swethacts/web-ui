@@ -38,7 +38,7 @@
 				tacophone.sendKeys("1234567890");
 				tacopwd.sendKeys("tacobell@12s");
 				tacosignup.click();
-				browser.driver.sleep(5000);
+				browser.driver.sleep(10000);
 		};
 
 	}; //end of QHHomepage

@@ -6,7 +6,7 @@
 		var tacosubmit = element(by.id('js-sign-in-profile'));
 
     browser.ignoreSynchronization = true;
-    browser.get('https://www.bbh.com/en-us');
+    browser.get('https://www.tacobell.com');
     //browser.driver.manage().window().maximize();
 
     this.gotToHome = function() {

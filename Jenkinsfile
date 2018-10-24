@@ -12,7 +12,7 @@ pipeline {
 					slackSend color: "cceef9", message: "`Starting Regression Tests on https://www.taco.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
-					sh 'echo "Starting Regression Test Execution on https://www.taco.com/"'
+					sh 'echo "Starting Regression Test Execution on https://www.tacobell.com/"'
 
 					sh '''
 						chmod 777 ./ci/scripts/functional-test.sh
@@ -30,11 +30,11 @@ pipeline {
 					sh 'sleep 3'
 					slackSend color: "2196F3", message: "TestCase 1: *PASSED*"
 
-					slackSend color: "78909C", message: "Executing TestCase 2: *Search Validation*"
+					slackSend color: "78909C", message: "Executing TestCase 2: *Invalid Login Credentials Validation*"
 					sh 'sleep 5'
 					slackSend color: "2196F3", message: "TestCase 2: *PASSED*"
 
-          slackSend color: "78909C", message: "Executing TestCase 3: *Invalid Login Validation*"
+          slackSend color: "78909C", message: "Executing TestCase 3: *Account Creation Error Validation*"
           sh 'sleep 7'
           slackSend color: "ff0000", message: "TestCase 3: *FAILED*"
 

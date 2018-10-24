@@ -9,6 +9,7 @@
 		var tacolast = element(by.name('lastName'));
 		var tacoemail = element(by.name('register_email'));
 		var tacophone = element(by.id('guestRegisterForm_mobileNumber'));
+		var tacopassword = element(by.id('password'));
 		var tacosignup = element(by.id('js-register-with-fb'));
 
     browser.ignoreSynchronization = true;
@@ -29,10 +30,8 @@
 		};
 
 		this.goToAccountCreation = function() {
-				tacofirst.sendKeys("Matt");
-				tacolast.sendKeys("Frowse");
-				tacoemail.sendKeys("testingmatt@gmail.com");
 				tacophone.sendKeys("1234567890");
+				tacopassword.sendKeys("abcdef");
 				tacosignup.click();
 				browser.driver.sleep(1000);
 		};

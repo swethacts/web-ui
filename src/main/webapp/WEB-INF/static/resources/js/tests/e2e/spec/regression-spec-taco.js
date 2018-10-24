@@ -17,10 +17,13 @@ describe('Taco application', function() {
 				expect(foo.getText()).toContain("Please reset your password and try again");
 	 });
 
-	 it('should display user prompt for Incomplete Account Form', function() {
+	 it('should display user prompt for Duplicate Registration', function() {
 			 application.goToAccountCreation();
-			 var foo = element(by.css('.validation-tooltip span'));
-			 expect(foo.getText()).toContain("Login error. Please try again");
+			 var foo = element(by.css('.validation-msg-container'));
+			 expect(foo.getText()).toContain("This email address can't be used");
 	});
 
 });
+
+
+#register\2e firstName

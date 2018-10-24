@@ -35,8 +35,8 @@
 				tacofirst.sendKeys("John");
 				tacolast.sendKeys("Frowe");
 				tacophone.sendKeys("1234567890");
-				tacoemail.sendKeys("testfrowe@gmail.com");
-				// tacopwd.sendKeys("abcdef");
+				tacoemail.sendKeys("fdjshfjk@j.com");
+				tacopwd.sendKeys("abcdef");
 				tacosignup.click();
 				browser.driver.sleep(1000);
 		};

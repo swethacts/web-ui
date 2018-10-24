@@ -1,8 +1,8 @@
 (function () {
 	var QHHomepage = function () {
-		var Food = element(by.linkText('Food'));
-		var Favorites = element(by.linkText('Favorites'));
-		var Locations = element(by.linkText('Locations'));
+		var Food = element(by.linkText('FOOD'));
+		var Favorites = element(by.linkText('FAVORITES'));
+		var Locations = element(by.linkText('LOCATIONS'));
 
     browser.ignoreSynchronization = true;
     browser.get('https://www.tacobell.com');

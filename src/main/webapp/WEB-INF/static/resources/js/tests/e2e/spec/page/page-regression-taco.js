@@ -5,6 +5,8 @@
 		var tacopassword = element(by.id('sign-in-password'));
 		var tacosubmit = element(by.id('js-sign-in-profile'));
 
+
+		var tacoregister = element(by.css('.btn-create-account'));
 		var tacofirst = element(by.name('firstName'));
 		var tacolast = element(by.name('lastName'));
 		var tacoemail = element(by.name('register_email'));
@@ -30,8 +32,12 @@
 		};
 
 		this.goToAccountCreation = function() {
+				tacoregister.click();
+				tacofirst.sendKeys("John");
+				tacolast.sendKeys("Frowe");
 				tacophone.sendKeys("1234567890");
-				tacopassword.sendKeys("abcdef");
+				tacoemail.sendKeys("testfrowe@gmail.com");
+				// tacopassword.sendKeys("abcdef");
 				tacosignup.click();
 				browser.driver.sleep(1000);
 		};

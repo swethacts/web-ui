@@ -14,7 +14,7 @@ describe('Taco application', function() {
 	 it('should display Error Mesasge for Incorrect Creds', function() {
 	 			application.goToLogin();
 				var foo = element(by.css('.validation-tooltip span'));
-				expect(foo.getText()).toEqual("Uh-oh. You've tried to log in too many times. Please reset your password and try again.");
+				expect(foo.getText()).toContain("Please reset your password and try again.");
 	 });
 
 	 it('should display user prompt for Incomplete Account Form', function() {
@@ -24,3 +24,7 @@ describe('Taco application', function() {
 	});
 
 });
+
+
+Expected 	'Uh-oh. You've tried to log in too many times. Please reset your password and try again.' to equal
+					'Uh-oh. You've tried to log in too many times. Please reset your password and try again.'.

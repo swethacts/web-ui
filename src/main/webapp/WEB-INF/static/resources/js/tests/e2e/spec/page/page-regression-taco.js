@@ -5,9 +5,9 @@
 		var tacopassword = element(by.id('sign-in-password'));
 		var tacosubmit = element(by.id('js-sign-in-profile'));
 
-		var tacofirst = element(by.id('register.firstName'));
-		var tacolast = element(by.id('register.lastName'));
-		var tacoemail = element(by.id('register.email'));
+		var tacofirst = element(by.name('firstName'));
+		var tacolast = element(by.name('lastName'));
+		var tacoemail = element(by.name('register_email'));
 		var tacophone = element(by.id('guestRegisterForm_mobileNumber'));
 		var tacosignup = element(by.id('js-register-with-fb'));
 

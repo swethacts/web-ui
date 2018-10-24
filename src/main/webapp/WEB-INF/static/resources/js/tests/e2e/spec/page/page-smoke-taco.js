@@ -1,11 +1,11 @@
 (function () {
 	var QHHomepage = function () {
-		var pb = element(by.linkText('Private Banking'));
-		var pp = element(by.linkText('Privacy Policy'));
-		var sm = element(by.linkText('Site Map'));
+		var Food = element(by.linkText('Food'));
+		var Favorites = element(by.linkText('Favorites'));
+		var Locations = element(by.linkText('Locations'));
 
     browser.ignoreSynchronization = true;
-    browser.get('https://www.bbh.com/en-us');
+    browser.get('https://www.tacobell.com');
     //browser.driver.manage().window().maximize();
 
     this.gotToHome = function() {
@@ -13,18 +13,18 @@
     	browser.driver.sleep(4000);
     };
 
-		this.goTopb = function() {
-				pb.click();
+		this.goToFood= function() {
+				Food.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.goTopp = function() {
-				pp.click();
+		this.goToFavorites= function() {
+				Favorites.click();
 				browser.driver.sleep(1000);
 		};
 
-		this.goTosm = function() {
-				sm.click();
+		this.goToLocations= function() {
+				Locations.click();
 				browser.driver.sleep(1000);
 		};
 

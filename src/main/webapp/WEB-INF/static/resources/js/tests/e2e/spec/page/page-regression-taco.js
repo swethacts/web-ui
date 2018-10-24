@@ -5,13 +5,12 @@
 		var tacopassword = element(by.id('sign-in-password'));
 		var tacosubmit = element(by.id('js-sign-in-profile'));
 
-
 		var tacoregister = element(by.css('.btn-create-account'));
 		var tacofirst = element(by.name('firstName'));
 		var tacolast = element(by.name('lastName'));
 		var tacoemail = element(by.name('register_email'));
 		var tacophone = element(by.id('guestRegisterForm_mobileNumber'));
-		var tacopassword = element(by.id('password'));
+		var tacopwd = element(by.id('password'));
 		var tacosignup = element(by.id('js-register-with-fb'));
 
     browser.ignoreSynchronization = true;
@@ -37,7 +36,7 @@
 				tacolast.sendKeys("Frowe");
 				tacophone.sendKeys("1234567890");
 				tacoemail.sendKeys("testfrowe@gmail.com");
-				// tacopassword.sendKeys("abcdef");
+				// tacopwd.sendKeys("abcdef");
 				tacosignup.click();
 				browser.driver.sleep(1000);
 		};

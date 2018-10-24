@@ -38,7 +38,7 @@
 				tacoemail.sendKeys("fdjshfjk@j.com");
 				tacopwd.sendKeys("abcdef");
 				tacosignup.click();
-				browser.driver.sleep(1000);
+				browser.driver.sleep(5000);
 		};
 
 	}; //end of QHHomepage

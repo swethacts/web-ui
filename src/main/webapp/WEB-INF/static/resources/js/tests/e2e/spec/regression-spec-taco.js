@@ -13,10 +13,8 @@ describe('Taco application', function() {
 
 	 it('should display Error Page', function() {
 	 			application.goToLogin();
-				// var foo = element(by.css('#loginForm > p.g-color-red'));
-				// expect(foo.getText()).toEqual('valid user ID and/or password');
+				var foo = element(by.css('.validation-tooltip span'));
+				expect(foo.getText()).toEqual("Uh-oh. You've tried to log in too many times.Please reset your password and try again");
 	 });
-
-
 
 });

@@ -15,7 +15,7 @@ describe('Taco application', function() {
 	 			application.goToLogin();
 				var foo = element(by.css('.validation-tooltip span'));
 				// expect(foo.getText()).toContain("Please reset your password and try again");
-				expect(foo.getText()).toContain("Please");
+				expect(foo.getText()).toContain("Login failed. Please try again");
 	 });
 
 	 it('should display Duplicate Email error for new account creation ', function() {

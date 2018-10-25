@@ -24,14 +24,14 @@
 
 		this.goToLogin = function() {
 				tacologin.click();
-				tacouser.sendKeys("test@gmail.com");
+				tacouser.sendKeys("idontknowwhatisthat@yahoo.com");
 				tacopassword.sendKeys("test");
 				tacosubmit.click();
 				browser.driver.sleep(1000);
 		};
 
 		this.goToAccountCreation = function() {
-				browser.driver.sleep(4000);
+				browser.driver.sleep(7000);
 				tacoregister.click();
 				tacofirst.sendKeys("John");
 				tacolast.sendKeys("Frowe");

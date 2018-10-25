@@ -31,6 +31,7 @@
 		};
 
 		this.goToAccountCreation = function() {
+				browser.driver.sleep(4000);
 				tacoregister.click();
 				tacofirst.sendKeys("John");
 				tacolast.sendKeys("Frowe");

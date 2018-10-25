@@ -9,7 +9,7 @@ pipeline {
 					slackSend color: "229954", message: "Starting *Regression Testing* Job													"
 
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Regression Tests on https://www.taco.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Regression Tests on https://www.tacobell.com/` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
 					sh 'echo "Starting Regression Test Execution on https://www.tacobell.com/"'

@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Version') {
 	  agent { docker 'weremsoft/gulp-xvfb-headless-chrome-protractor' } 
-      steps {/
+      steps {
 		//slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		//slackSend "Docker Container Created"
         sh '''
